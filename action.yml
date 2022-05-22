@@ -28,6 +28,16 @@ runs:
             mkdir InferenceVerificationTest
             mkdir ErrorProvocationTest
             touch ontology.owl
+            cd TestDocumentation
+            mkdir PassedTests
+            mkdir FailedTests
+            cd PassedTests 
+            echo "This directory stores successfully passed tests." > README.md
+            cd ..
+            cd FailedTests 
+            echo "This directory stores failed tests." > README.md
+            cd ..
+            cd ..
             cd CompetencyQuestionVerificationTest
             mkdir CQTestCase
             mkdir CQDataSet
