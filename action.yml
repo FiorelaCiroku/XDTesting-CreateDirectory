@@ -1,0 +1,63 @@
+# This is an action that is able to create GitHub directories and files.
+# Trigger: Push event 
+# Input: Name of the ontology module
+# Output: 1) Creation of a directory structure for the conceptual component. 2) A pull request to add the directories to the main branch. 
+
+# The name of the action
+name: Create directory structure for XDTesting
+
+# Description of the action
+description: This action is able create a directory structure in a Github repository.
+
+# Action icon and color
+branding:
+  icon: 'box'  
+  color: 'blue'
+
+runs:
+  using: "composite"
+  # Steps that will be executed as part of the job
+  steps:
+      # Create directories
+    - name: create-directory
+      shell: bash
+      run: |
+            mkdir TestDocumentation
+            mkdir TestingUserInput
+            mkdir CompetencyQuestionVerificationTest
+            mkdir InferenceVerificationTest
+            mkdir ErrorProvocationTest
+            touch ontology.owl
+            cd CompetencyQuestionVerificationTest
+            mkdir CQTestCase
+            mkdir CQDataSet
+            cd CQTestCase 
+            echo "This directory stores Competency Question Verification test cases." > README.md
+            cd ..
+            cd CQDataSet 
+            echo "This directory stores Competency Question Verification test cases' data." > README.md
+            cd ..
+            cd ..
+            cd InferenceVerificationTest
+            mkdir IVTestCase
+            mkdir IVDataSet
+            cd IVTestCase
+            echo "This directory stores Inference Verification test cases." > README.md
+            cd ..
+            cd IVDataSet
+            echo "This directory stores Inference Verification test cases' data." > README.md
+            cd ..
+            cd ..
+            cd ErrorProvocationTest
+            mkdir EPTestCase
+            mkdir EPDataSet
+            cd EPTestCase
+            echo "This directory stores Error Provocation test cases." > README.md
+            cd ..
+            cd EPDataSet
+            echo "This directory stores Error Provocation test cases' data." > README.md
+        
+              
+      # This step creates an automatic pull request for the directories that were created.      
+    - name: Pull-to-master
+      uses: peter-evans/create-pull-request@v3
