@@ -28,6 +28,9 @@ runs:
             mkdir InferenceVerificationTest
             mkdir ErrorProvocationTest
             touch ontology.owl
+            cd TestingUserInput
+            echo "This directory stores input files for contructing test cases." > README.md
+            cd ..
             cd TestDocumentation
             mkdir PassedTests
             mkdir FailedTests
