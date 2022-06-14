@@ -36,14 +36,14 @@ runs:
       run: |
             mkdir -p XDTesting
             cd XDTesting
-            mkdir ${{ inputs.ontologyName }}
+            mkdir "${{ inputs.ontologyName }}${{ inputs.ontologyNameAdd }}"
             cd ${{ inputs.ontologyName }}
             mkdir TestDocumentation
             # mkdir TestingUserInput
             mkdir CompetencyQuestionVerificationTest
             mkdir InferenceVerificationTest
             mkdir ErrorProvocationTest
-            touch ${{ inputs.ontologyName }}.owl
+            touch "${{ inputs.ontologyName }}${{ inputs.ontologyNameAdd }}".owl
             # cd TestingUserInput
             # echo "This directory stores input files for contructing test cases." > README.md
             # cd ..
