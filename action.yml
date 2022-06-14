@@ -14,23 +14,35 @@ branding:
   icon: 'box'  
   color: 'blue'
 
+inputs:
+    ontologyName:
+      description: 'Name of the ontology'
+      required: true
+      type: string
+
 runs:
+
   using: "composite"
   # Steps that will be executed as part of the job
+  
   steps:
       # Create directories
     - name: create-directory
       shell: bash
       run: |
+            mkdir XDTesting
+            cd XDTesting
+            mkdir ${{ inputs.ontologyName }}
+            cd ${{ inputs.ontologyName }}
             mkdir TestDocumentation
-            mkdir TestingUserInput
+            # mkdir TestingUserInput
             mkdir CompetencyQuestionVerificationTest
             mkdir InferenceVerificationTest
             mkdir ErrorProvocationTest
             touch ontology.owl
-            cd TestingUserInput
-            echo "This directory stores input files for contructing test cases." > README.md
-            cd ..
+            # cd TestingUserInput
+            # echo "This directory stores input files for contructing test cases." > README.md
+            # cd ..
             cd TestDocumentation
             mkdir PassedTests
             mkdir FailedTests
