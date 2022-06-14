@@ -38,7 +38,7 @@ runs:
             mkdir CompetencyQuestionVerificationTest
             mkdir InferenceVerificationTest
             mkdir ErrorProvocationTest
-            touch ontology.owl
+            touch ${{ inputs.ontologyName }}.owl
             # cd TestingUserInput
             # echo "This directory stores input files for contructing test cases." > README.md
             # cd ..
