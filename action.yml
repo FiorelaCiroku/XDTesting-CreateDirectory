@@ -18,6 +18,7 @@ inputs:
     ontologyName:
       description: 'Name of the ontology'
       required: true
+      type: string
 
 runs:
 
