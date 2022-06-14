@@ -43,57 +43,58 @@ runs:
     - name: create-directory
       shell: bash
       run: |
-            mkdir -p XDTesting
-            cd XDTesting
-            mkdir ${ontologyName}
-            cd ${ontologyName}
-            mkdir TestDocumentation
-            # mkdir TestingUserInput
-            mkdir CompetencyQuestionVerificationTest
-            mkdir InferenceVerificationTest
-            mkdir ErrorProvocationTest
-            touch $ontologyName.owl
-            # cd TestingUserInput
-            # echo "This directory stores input files for contructing test cases." > README.md
-            # cd ..
-            cd TestDocumentation
-            mkdir PassedTests
-            mkdir FailedTests
-            cd PassedTests 
-            echo "This directory stores successfully passed tests." > README.md
-            cd ..
-            cd FailedTests 
-            echo "This directory stores failed tests." > README.md
-            cd ..
-            cd ..
-            cd CompetencyQuestionVerificationTest
-            mkdir CQTestCase
-            mkdir CQDataSet
-            cd CQTestCase 
-            echo "This directory stores Competency Question Verification test cases." > README.md
-            cd ..
-            cd CQDataSet 
-            echo "This directory stores Competency Question Verification test cases' data." > README.md
-            cd ..
-            cd ..
-            cd InferenceVerificationTest
-            mkdir IVTestCase
-            mkdir IVDataSet
-            cd IVTestCase
-            echo "This directory stores Inference Verification test cases." > README.md
-            cd ..
-            cd IVDataSet
-            echo "This directory stores Inference Verification test cases' data." > README.md
-            cd ..
-            cd ..
-            cd ErrorProvocationTest
-            mkdir EPTestCase
-            mkdir EPDataSet
-            cd EPTestCase
-            echo "This directory stores Error Provocation test cases." > README.md
-            cd ..
-            cd EPDataSet
-            echo "This directory stores Error Provocation test cases' data." > README.md
+        ontoName=$ontologyName
+        mkdir -p XDTesting
+        cd XDTesting
+        mkdir $ontoName
+        cd $ontoName
+        mkdir TestDocumentation
+        # mkdir TestingUserInput
+        mkdir CompetencyQuestionVerificationTest
+        mkdir InferenceVerificationTest
+        mkdir ErrorProvocationTest
+        touch $ontologyName.owl
+        # cd TestingUserInput
+        # echo "This directory stores input files for contructing test cases." > README.md
+        # cd ..
+        cd TestDocumentation
+        mkdir PassedTests
+        mkdir FailedTests
+        cd PassedTests 
+        echo "This directory stores successfully passed tests." > README.md
+        cd ..
+        cd FailedTests 
+        echo "This directory stores failed tests." > README.md
+        cd ..
+        cd ..
+        cd CompetencyQuestionVerificationTest
+        mkdir CQTestCase
+        mkdir CQDataSet
+        cd CQTestCase 
+        echo "This directory stores Competency Question Verification test cases." > README.md
+        cd ..
+        cd CQDataSet 
+        echo "This directory stores Competency Question Verification test cases' data." > README.md
+        cd ..
+        cd ..
+        cd InferenceVerificationTest
+        mkdir IVTestCase
+        mkdir IVDataSet
+        cd IVTestCase
+        echo "This directory stores Inference Verification test cases." > README.md
+        cd ..
+        cd IVDataSet
+        echo "This directory stores Inference Verification test cases' data." > README.md
+        cd ..
+        cd ..
+        cd ErrorProvocationTest
+        mkdir EPTestCase
+        mkdir EPDataSet
+        cd EPTestCase
+        echo "This directory stores Error Provocation test cases." > README.md
+        cd ..
+        cd EPDataSet
+        echo "This directory stores Error Provocation test cases' data." > README.md
         
               
       # This step creates an automatic pull request for the directories that were created.      
