@@ -32,28 +32,23 @@ runs:
   # Steps that will be executed as part of the job
   
   steps:
-  
-    - name: Concatenate ontology name
-      shell: bash
-      run: |
-        ontologyName=${{ inputs.ontologyName }}${{ inputs.ontologyNameAdd }}
-        echo $ontologyName
     
-      # Create directories
+    # Create directories
     - name: create-directory
       shell: bash
       run: |
-        ontoName="$ontologyName"
+        ontologyName=${{inputs.ontologyName}}${{inputs.ontologyNameAdd}}
+        echo $ontologyName
         mkdir -p XDTesting
         cd XDTesting
-        mkdir ${ontoName}
-        cd ${ontoName}
+        mkdir "$ontologyName"
+        cd "$ontologyName"
         mkdir TestDocumentation
         # mkdir TestingUserInput
         mkdir CompetencyQuestionVerificationTest
         mkdir InferenceVerificationTest
         mkdir ErrorProvocationTest
-        touch $ontologyName.owl
+        touch "$ontologyName".owl
         # cd TestingUserInput
         # echo "This directory stores input files for contructing test cases." > README.md
         # cd ..
