@@ -43,11 +43,11 @@ runs:
     - name: create-directory
       shell: bash
       run: |
-        ontoName=$ontologyName
+        ontoName="$ontologyName"
         mkdir -p XDTesting
         cd XDTesting
-        mkdir NewOntology
-        cd NewOntology
+        mkdir ${ontoName}
+        cd ${ontoName}
         mkdir TestDocumentation
         # mkdir TestingUserInput
         mkdir CompetencyQuestionVerificationTest
