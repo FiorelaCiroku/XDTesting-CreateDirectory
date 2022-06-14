@@ -36,7 +36,7 @@ runs:
     - name: Concatenate ontology name
       shell: bash
       run: |
-        $ontologyName="${{ inputs.ontologyName }}${{ inputs.ontologyNameAdd }}"
+        ontologyName="${{ inputs.ontologyName }}${{ inputs.ontologyNameAdd }}"
         echo $ontologyName
     
       # Create directories
