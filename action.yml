@@ -46,8 +46,8 @@ runs:
         ontoName=$ontologyName
         mkdir -p XDTesting
         cd XDTesting
-        mkdir $ontoName
-        cd $ontoName
+        mkdir NewOntology
+        cd NewOntology
         mkdir TestDocumentation
         # mkdir TestingUserInput
         mkdir CompetencyQuestionVerificationTest
