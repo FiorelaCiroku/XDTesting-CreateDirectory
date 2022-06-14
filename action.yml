@@ -19,6 +19,10 @@ inputs:
       description: 'Name of the ontology'
       required: true
       type: string
+    ontologyNameAdd:
+      description: 'Second name of the ontology'
+      required: false
+       type: string
 
 runs:
 
