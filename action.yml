@@ -45,9 +45,8 @@ runs:
       run: |
             mkdir -p XDTesting
             cd XDTesting
-            echo "$ontologyName"
-            mkdir "$ontologyName"
-            cd "$ontologyName"
+            mkdir $ontologyName
+            cd $ontologyName
             mkdir TestDocumentation
             # mkdir TestingUserInput
             mkdir CompetencyQuestionVerificationTest
