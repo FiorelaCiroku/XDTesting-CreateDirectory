@@ -29,7 +29,7 @@ runs:
     - name: create-directory
       shell: bash
       run: |
-            mkdir XDTesting
+            mkdir -p XDTesting
             cd XDTesting
             mkdir ${{ inputs.ontologyName }}
             cd ${{ inputs.ontologyName }}
