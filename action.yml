@@ -87,6 +87,10 @@ runs:
         cd ..
         cd EPDataSet
         echo "This directory stores Error Provocation test cases' data." > README.md
+        cd ..
+        cd ..
+        cd ..
+        cd ..
         
               
       # This step creates an automatic pull request for the directories that were created.      
