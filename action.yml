@@ -37,8 +37,7 @@ runs:
     - name: create-directory
       shell: bash
       run: |
-        #ontologyName=${{inputs.ontologyName}}${{inputs.ontologyNameAdd}}
-        #echo $ontologyName
+        echo ${{inputs.ontologyName}}
         mkdir -p XDTesting
         cd XDTesting
         mkdir ${{inputs.ontologyName}}
