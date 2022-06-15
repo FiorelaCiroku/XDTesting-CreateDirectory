@@ -18,7 +18,6 @@ inputs:
     ontologyName:
       description: 'Name of the ontology'
       required: true
-      type: string
 
 runs:
 
@@ -58,7 +57,7 @@ runs:
         cd ..
         cd ..
         cd CompetencyQuestionVerificationTest
-        echo "TestDocumentation directory created"
+        echo "CompetencyQuestionVerificationTest directory created"
         mkdir CQTestCase
         mkdir CQDataSet
         cd CQTestCase 
@@ -69,7 +68,7 @@ runs:
         cd ..
         cd ..
         cd InferenceVerificationTest
-        echo "TestDocumentation directory created"
+        echo "InferenceVerificationTest directory created"
         mkdir IVTestCase
         mkdir IVDataSet
         cd IVTestCase
@@ -80,7 +79,7 @@ runs:
         cd ..
         cd ..
         cd ErrorProvocationTest
-        echo "TestDocumentation directory created"
+        echo "ErrorProvocationTest directory created"
         mkdir EPTestCase
         mkdir EPDataSet
         cd EPTestCase
