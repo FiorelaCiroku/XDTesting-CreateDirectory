@@ -10,6 +10,6 @@ Add the following entry to your Github workflow YAML file:
 ```
 steps:
   - name: XDTesting Create Test Directory
-    uses: FiorelaCiroku/XDTesting-CreateDirectory@v1.0.23
+    uses: FiorelaCiroku/XDTesting-CreateDirectory@v1.0.24
   
 ```
