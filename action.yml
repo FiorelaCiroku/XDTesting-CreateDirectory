@@ -20,11 +20,11 @@ inputs:
       required: true
       type: string
       
-    ontologyNameAdd:
-      description: 'Second name of the ontology'
-      required: false
-      type: string
-      default: ""
+    #ontologyNameAdd:
+     # description: 'Second name of the ontology'
+      #required: false
+      #type: string
+      #default: ""
 
 runs:
 
@@ -37,18 +37,18 @@ runs:
     - name: create-directory
       shell: bash
       run: |
-        ontologyName=${{inputs.ontologyName}}${{inputs.ontologyNameAdd}}
-        echo $ontologyName
+        #ontologyName=${{inputs.ontologyName}}${{inputs.ontologyNameAdd}}
+        #echo $ontologyName
         mkdir -p XDTesting
         cd XDTesting
-        mkdir "$ontologyName"
-        cd "$ontologyName"
+        mkdir ${{inputs.ontologyName}}
+        cd ${{inputs.ontologyName}}
         mkdir TestDocumentation
         # mkdir TestingUserInput
         mkdir CompetencyQuestionVerificationTest
         mkdir InferenceVerificationTest
         mkdir ErrorProvocationTest
-        touch "$ontologyName".owl
+        touch ${{inputs.ontologyName}}.owl
         # cd TestingUserInput
         # echo "This directory stores input files for contructing test cases." > README.md
         # cd ..
