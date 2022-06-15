@@ -19,12 +19,6 @@ inputs:
       description: 'Name of the ontology'
       required: true
       type: string
-      
-    #ontologyNameAdd:
-     # description: 'Second name of the ontology'
-      #required: false
-      #type: string
-      #default: ""
 
 runs:
 
@@ -42,6 +36,7 @@ runs:
         cd XDTesting
         mkdir ${{inputs.ontologyName}}
         cd ${{inputs.ontologyName}}
+        echo "${{inputs.ontologyName}} directory created"
         mkdir TestDocumentation
         # mkdir TestingUserInput
         mkdir CompetencyQuestionVerificationTest
