@@ -47,6 +47,7 @@ runs:
         # echo "This directory stores input files for contructing test cases." > README.md
         # cd ..
         cd TestDocumentation
+        echo "TestDocumentation directory created"
         mkdir PassedTests
         mkdir FailedTests
         cd PassedTests 
@@ -57,6 +58,7 @@ runs:
         cd ..
         cd ..
         cd CompetencyQuestionVerificationTest
+        echo "TestDocumentation directory created"
         mkdir CQTestCase
         mkdir CQDataSet
         cd CQTestCase 
@@ -67,6 +69,7 @@ runs:
         cd ..
         cd ..
         cd InferenceVerificationTest
+        echo "TestDocumentation directory created"
         mkdir IVTestCase
         mkdir IVDataSet
         cd IVTestCase
@@ -77,6 +80,7 @@ runs:
         cd ..
         cd ..
         cd ErrorProvocationTest
+        echo "TestDocumentation directory created"
         mkdir EPTestCase
         mkdir EPDataSet
         cd EPTestCase
